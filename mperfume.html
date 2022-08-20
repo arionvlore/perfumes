@@ -1,0 +1,153 @@
+{% extends 'main.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href= "{% static 'mperfume.css' %}">
+    <script src="card.js"></script>
+</head>
+<body>
+{% block content %}
+    <section class="product">
+        <div class="container py-5">
+            <div class="row py-5 m-auto text-center">
+                <div class="col-lg5">
+                    <h1>Men's Perfume</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="card border-0 bg-light mb-2">
+                        <div class="card-body">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPncywX73iz37ldM8xSbz9MUdLKtmdjQcu_g&usqp=CAU" class="img-fluid" alt="#">
+                        </div>
+                    </div>
+                    <h6>ARMANI</h6>
+                    <h6>CodeM05: 30$</h6>
+                </div>
+                <div class="col-lg-3">
+                  <div class="card border-0 bg-light mb-2">
+                      <div class="card-body">
+                          <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxAQEhUQEA8QDxARFRUPEBAPEBAQEBUQFRUXFxYWFRUYHSohGBolGxUVIT0hJSkuLjAuFx8zODMsNygtLisBCgoKDg0OGxAQGTclICU3LSsuKzcuMjctMS8tKysuLS01NS0tMDAvNy0tLS0tLS8uKy0tLy0tLS03Ly0tKysrK//AABEIAOEA4QMBIgACEQEDEQH/xAAbAAEAAQUBAAAAAAAAAAAAAAAABgEDBAUHAv/EAEgQAAIBAwEEBgQJCAgHAAAAAAABAgMEEQUGEiExEyJBUWFxB4GRoRQjMjNCVHKS0lJzsbKzwcLRFUNVYoKi4fAkJTREdIOT/8QAGQEBAQEBAQEAAAAAAAAAAAAAAAIBAwUE/8QAKhEBAAIBAwMBBwUAAAAAAAAAAAECEQMhMQQSEzIiM0FCUXGxBRVSgcH/2gAMAwEAAhEDEQA/AO4gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjW2+0s9PpQqxoOspS3JPLSjw4cueSD3HpDv6kHVp9BShxwt6g6n3Zzy8eQZl10HGqnpPvbbdddU6qljkqT9rpz6vZ2dqL1P01xfO3h44mwZdfBzbT/S/aTeKlGpDxhKMvapYJpo+0Ftdr4itGbxlw5VEvGL49oMw2oADQAAAAAAAAAAAAAAAAAAAAAAAAAADRbQ1JZUFKUY7rk92Ti2+S4rjhd38jekN251iFtUpqcK03Vi4U1SpynmSeWsrguDyBpq0I8eCznnjrcJQ7TYWeN6eFw4epdHWNRBXtRuUbGai22ukq0oPD3ccMvtj7zEvdeuLWTU7JPOP+4jyUakfye1VE/UaN7evDyu+L9lKk/3I1UqFOpGMZwhLKz1op/Skub+wl6jxa3l5dLehZxS4c7iOeEIw/J/utlm6ndUUpVbKqowWJSpzpVPpSeVh5+l7jB72X2Ysru4uravbU5wp06M6U4ro6sXNTjUSnDDx1YvD7cl7VvRxWtPj9OrVKjh11SnKKqppfQmksvhyfe+Zkei++jcXl3Vpxmo7kIycoSjiW/JqOXzeMnTMBk1iUX2G2ld7TlCrwuKXCphOKkuSljs5NNd5KSF3FqrbWKM6a3YXdOpGolwXSQjKUpevdh72TQMqAAKAAAAAAAAAAAAAAAAAAAAAAAACJekLla/+Sv2NUlpHNttMr16dN28I1KlCp0ypymqan8XOON58uMl7ALlt8n1EB21l8YYmjbc31ddWnbQjjK6lWUvW3NL3Eb2m1u6lPMnDOeyCwMo8kOmbGPqeo2WvLNKfkc42Y1y9VNyhOjw49anle5oxLz0hX0pSo1KdpJPtjTrQfHx6Rr3GN74T70Nf9PdeF3P9nTOhHG/R/tbbafQrxr77nVrfCIqKWHvQjFrOe+HvLt9tXqGrt0LGg1SeVKUcqLWVwqVXwS8F488mndCU2l9G81WMqb3qVpSnFSXJ1JdWTT7nvY/wsmxH9jtmo2FLdcukqz41anlyjHwXH2v1SAEAACgAAAAAAAAAAAAAAAAAAAAAAPMpJLLeEuLb5YArk1Wp6tuy6GjHpa7+jnqwX5U32Gq1XaGVRuja/ZlVxwX2P5njSNOlQjJqtKEp8ZSxCbb78yTb8i4pPxRN4WtF2BtbeOEsvCWFvbqS7MN8S/d7F0Z8oW/m6Ec+1FKt5dQXVuVLxnRg/wBXBiz1q+X9fQ/+Evxm9lmZqy7bZCNPkqHkqX7jUar6Pres3ilSp1McHGPR58pwaw/UZL1q+f8AX0V5W/8AOZbdW8qfKvpQ/N0KK/WTHZYzVgbHbI2VtVqU7yn09abh0UL6FKrCO65fNSceb3l91HSKNGMVuwjGEVyjFKMV6kRien9PT3atepVkuUpdHF571uRTPdhqtS1apXLc6XKNXnKK7N/vXiZNPo2LQlIPMJppNNNPimuKaPRCwAAAAAAAAAAAAAAAAAAAAAAKMDxXrRhFym1GMVlt8kiG397VvXuwzCh2Lk5Lvl/I9bea1Tpzo2bk1Ou9/dSbylwSeOSy+3uNppVuqdLefYnJ+SR1pERGU3rbbbl503TI0o4S8yt5VS4ZMPStqrW8c6dvKcpQjvyUqcodXOODfiaOO0lvXrOhTnJ1FvZThKK6nCXFlRaFT02rXMTWduduGwrVDEnIpc1VCMpy4RinJvnwSyzB0vVaN1vdDJy3N3ezFx+VvY58/ks6ZjOHCNK9qzeI2jmfgzVIv0pmm1bWaFtwqTzPn0cFvTx3tdi8zX0NtLdtKVOtBPlJxi17E8kzevGX0afRdRqV7q0nCe2VbDM++tVVjg0emXMakVOnJThLipReUzK1bae2sYLpptzlxhSgt6o1347F4vgTaYjdz09K979kRv8ARjaff1LGfRzzK3k+XNwffHw8P9uaUqiklKLymk01yafJnINU2+o1+dpXpxfKo3CSfq5exsm2wOrRrUnGMt+K60H68Si12YeHj+8c7TW28O+p0utoe8riEsBTJUhzAAAAAAAAAAAAAAAAAAAKMqUYHGPSRcpa1Rc5KMIU6LbfJLeqNsnC2oseicfhlDLhJY31nkyCek63jU1mlCabjUo0YySeHjfq9pJIej3Tujc+jqbyi389UxlLK7TK5xOHq3jp5ppeWZicbY+8ov6Kvn6/5lftEYGy6/5jP7Vx+lmf6Kvn6/5lfroxNlVjU5p8OtcLj35Yr8v3ej1HvOox/GPwmGtR/wCHrfmp/qsh+wtwqVK8qtZ6OFOeO9pVml62TjX1i1rt8EqVT9VkF2QtpVLXUIxTbdKCiu+SjWeF48l6zpqT7cPN/T6xPR6kW47q/mHnY+w+F3FStXSqKGJtPipVZPq58Ek/cTnUNKp16cqc4JprCaXGL7Gn2YZFfRjcLerUsreajUiu+KypY9sfabraHZeVxUdf4XOhFQSlGOd1KGW3zFMdmcZV1/dPW9s37YiIx/myuyGkVrKFR1qkZQfXVOOWoOOcvefa1jKS+iRvZO1/pXUXUuOvDEricW+DjFxjCHDs6y4dqTK7AqVWpcU3UlJSt5wjvSk+bSzhvxL/AKKK/RXs6U+rKpSlTSfPpISi932KXsOczE4h9vjvpee0zm+I3iMcum65aU6lCVGcIum1u7uFheXcc39FFWdDU6trl7jjVjJdm9TkkpLzR0zVfm2cz9G1TpdZq1I8Y7tdprlu70VF+tFXiIw8npLWnR1azxjP9u1IqURUx8QAAAAAAAAAAAAAAAAAABRlSjA5f6QdEqz1K3uo7vRxhCMsvEurKT4Lt5k0tU5UWlzcWlnllowdsl1oPw/i/wBTYaXxpo6xX2S+ta01ifl2hB9iNlLmxq1Z1+j3Z09yO5Peed9Pu7smNtNshWdf4XZTUKrlvyg3uNTx8qEvHufbk6JcIxGh44mMPo/cdbzTq/GYxO20w5veadrV3Hoayp06bxvvNOCljj1t3i+XIluzehQs6PRJ78m96pPGN6eMcuxJcDdKJ63So04jdOv119WnjiIrXnEQ59quxtxSrfCbCooPLl0be44t/KUXycX3M9V7DWryPQ1uit6UsKpJYzJd3VbbXhlE+3S4ok+OPguP1PUxHdWJmOLTG6EbFbL3FnXqTqODpuLhCUZ5k+umm1jhwWS5tPsRUqVfhljNUq+VOUMuHXX04S+i/B8/aTSMDLpoeOuMM/ctedby53nadtpcz1O51+tSdCpbxpRkt2dZOnFtdvFTeM+CNz6MNAjauUm1KtNS35rsjHcxFeGZPj2ko1j5pmJshHi33KfvkvwmdkRGWavW2vXx1rFYnnEcpQkVKFTm4AAAAAAAAAAAAAAAAAAAAACNbYx4RfhL3SpmRo7+LRTa2Pxaf2l7s/wnnQn8WjrHpcp9TKuEYckZ1dGK0XHCZW0XEjzguRNYpg9RRQ9wDVYxMimi0i/AyWwwNb4UmWNjo8JfZhj71T/Qva980xslH4uT+yvdn+IifS2PU3wAOTqAAAAAAAAAAAAAAAAAAAAANNtQs0fKX6YSX7zF2el8WbLXYZoyXiv0mn2bn1DrX0udvU21Ux8GTVLBccIlaaPSDRU1imC5A8HuAauouwLaL0SbNhrdf+aZf2Yjij54/UiY+0D+LZnaDHFGP++SS/cTb0qrHtNiADk6AAAAAAAAAAAAAAAAAAAAADE1PHRSzySy/JNNkY2clhuL5rgSrUKW/TqQ/KhKPti0c30C5rOW7GazzUmsyw+x8OK49vE6V4lFuU+my0kYMqt3HnbqssZ3qU4w/wAsnk8Rv7j6hX+9AqLQmayz8DBhfDrj6jW+9Ep8NuPqNb70Te6Gdss3BcgjXq7r/Uq/tiXI3lX6nX/y/wAx3Qdstgi7A1Tvq/ZZV35uCPdK5unzteiXPenUjL3LiTNobES8bQvqY78I2+lY6KOOXFrycmQPajUa7ahmMVn6HPC8ewnmk0ejoUoPnGnCL81FJ+8y3Cq8ssAHNYAAAAAAAAAAAAAAAAAAAAAHO7ah0F3Upvgk3j7D4xfljC9R0QwNQ0ijXw6kesvkzi3GaXcpLs8CqzhNoy92c8oyTV0tFlDhC6rxX/rl73EuPTav12uv8Nv+AzZTYA1b0mv9fuPuUPwHl6RX/tC4+5Q/AGNtkGp/oav/AGhc/ct/wFVo9b6/c/dofgA2pZuHwMBaNU7b66frpr9ESlTQXL5V3dPyqbv6EIEV1Oj0t1TpR4uUkseHOT8kk/YdBgjB03RqFu3KnDM3wdSbc6jXdvPjjwNgbackRgABLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAf//Z" class="img-fluid" alt="#">
+                      </div>
+                  </div>
+                  <h6>HUGO BOSS</h6>
+                      <h6>CodeM06: 30$</h6>
+
+              </div>
+              <div class="col-lg-3">
+                  <div class="card border-0 bg-light mb-2">
+                      <div class="card-body">
+                          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1EG7dJLfgv2JOJWvKsUv_CHHq_kP2Cu6Wvg&usqp=CAU" class="img-fluid" alt="#">
+                      </div>
+                  </div>
+                  <h6>YVES SAINT LAURENT</h6>
+                    <h6>CodeM07: 30$</h6>
+              </div>
+              <div class="col-lg-3">
+                  <div class="card border-0 bg-light mb-2">
+                      <div class="card-body">
+                          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTA39J0tNczK57LeEvghPonmqOA2huKa5w_fw&usqp=CAU" class="img-fluid" alt="#">
+                      </div>
+                  </div>
+                  <h6>CALVIN KLEIN</h6>
+                    <h6>CodeM08: 30$</h6>
+              </div>
+            </div>
+        </div>
+        <div class="container py-5">
+            <div class="row py-5 m-auto text-center">
+                <div class="col-lg5">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="card border-0 bg-light mb-2">
+                        <div class="card-body">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfTZeC-b_iuuHBFDeoe-o53BqdlojbjTmS5-WyELSLwwfqv43bmlGtDEnHovZLrdNuan0&usqp=CAU" class="img-fluid" alt="#">
+                        </div>
+                    </div>
+                    <h6>ARMANI</h6>
+                      <h6>CodeM09: 30$</h6>
+                </div>
+                <div class="col-lg-3">
+                  <div class="card border-0 bg-light mb-2">
+                      <div class="card-body">
+                          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQul4Qmn6yT8Yv8-AYungpuRbfBejsjaeuJCA&usqp=CAU" class="img-fluid" alt="#">
+                      </div>
+                  </div>
+                  <h6>HUGO BOSS</h6>
+                      <h6>CodeM10: 30$</h6>
+              </div>
+              <div class="col-lg-3">
+                  <div class="card border-0 bg-light mb-2">
+                      <div class="card-body">
+                          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRQ03iN1vekPziJjyHe0nySq0d09AI4QzbXg&usqp=CAU" class="img-fluid" alt="#">
+                      </div>
+                  </div>
+                  <h6>YVES SAINT LAURENT</h6>
+                    <h6>CodeM11: 30$</h6>
+              </div>
+              <div class="col-lg-3">
+                  <div class="card border-0 bg-light mb-2">
+                      <div class="card-body">
+                          <img src="data:image/jpeg;base64,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" class="img-fluid" alt="#">
+                      </div>
+                  </div>
+                  <h6>CALVIN KLEIN</h6>
+                    <h6>CodeM12: 30$</h6>
+              </div>
+            </div>
+        </div>
+        <div class="container py-5">
+            <div class="row py-5 m-auto text-center">
+                <div class="col-lg5">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="card border-0 bg-light mb-2">
+                        <div class="card-body">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvCv9gKNuN4zAGBFWeUTEkRXhD8WljRvp5PQ&usqp=CAU" class="img-fluid" alt="#">
+                        </div>
+                    </div>
+                    <h6>ARMANI</h6>
+                      <h6>CodeM13: 30$</h6>
+                </div>
+                <div class="col-lg-3">
+                  <div class="card border-0 bg-light mb-2">
+                      <div class="card-body">
+                          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3fAOBBlCnSxHB-UWaSslUfr_1WOBM0m_XSQ&usqp=CAU" class="img-fluid" alt="#">
+                      </div>
+                  </div>
+                  <h6>HUGO BOSS</h6>
+                      <h6>CodeM14: 30$</h6>
+              </div>
+              <div class="col-lg-3">
+                  <div class="card border-0 bg-light mb-2">
+                      <div class="card-body">
+                          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCFBKnr4jaxPq1e7TlPdZl4oUT2-vcH-VEfg&usqp=CAU" class="img-fluid" alt="#">
+                      </div>
+                  </div>
+                  <h6>YVES SAINT LAURENT</h6>
+                    <h6>CodeM15: 30$</h6>
+              </div>
+              <div class="col-lg-3">
+                  <div class="card border-0 bg-light mb-2">
+                      <div class="card-body">
+                          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJiAt1CU3CWiqvZQLJmQH6A3Llhc3btUeJzA&usqp=CAU" class="img-fluid" alt="#">
+                      </div>
+                  </div>
+                  <h6>CALVIN KLEIN</h6>
+                    <h6>CodeM16: 30$</h6>
+              </div>
+            </div>
+        </div>
+   </section>
+{% endblock content %}
+</body>
+</html>

@@ -1,0 +1,216 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfum Online Shop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href= "{% static 'main.css' %}">
+    <script src="{% static 'main.js' %}"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+
+    </script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+</head>
+<body>
+{% block content %}
+    <nav class="navbar">
+        <div id="trapezoid">
+          <a class="sub-home" href="#">Home</a>
+          <a href="#Home" class="expandHome">Home</a>
+           <div class="subnav">
+           <button class="subnavbtn">Man<i class="fa fa-caret-down"></i></button>
+             <div class="subnav-content">
+              <div id="subnav-trapezoid">
+                <a href="{% url 'mperfume' %}">Perfume</a>
+                <a href=  'mtester' >Tester</a>
+              </div>
+             </div>
+          </div>
+           <div class="subnav">
+           <button class="subnavbtn">Woman<i class="fa fa-caret-down"></i></button>
+             <div class="subnav-content">
+              <div class="subnav-trapezoid">
+                <a href="fperfume">Perfume</a>
+                <a href="ftester">Tester</a>
+               </div>
+             </div>
+            </div>
+          <a href="contact" class="expandHome">Contact</a>
+          </div>
+    </nav>
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img src="https://do5ctr7j643mo.cloudfront.net/wp-content/uploads/2019/09/08153433/FB-card-Dior-Sauvage.jpg" class="img1" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>First slide label</h5>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="10000">
+            <img src="https://cdn.hipwallpaper.com/m/47/54/7cWdfH.jpg" class="img2" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Second slide label</h5>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src=" https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/9b180736813493.572a241d94162.jpg" class="img3" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Third slide label</h5>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+   </div>
+     <section class="new">
+        <div class="container py-5">
+          <div class="row pt-5">
+            <div class="col-lg-7 m-auto">
+              <div class="row text-center">
+                <div class="col-lg-4">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRStr5j9nZ6W3fNqzRm7WqHvvZWRaQpFozpWQ&usqp=CAU" class="img-luid" alt="#">
+                  <br>
+                  <br>
+                  <h6>CHANEL</h6>
+                </div>
+                  <div class="col-lg-4">
+                    <img src="data:image/jpeg;base64,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" class="img-luid" alt="#">
+                    <br>
+                    <br>
+                    <h6>TOM FORD</h6>
+                </div>
+                <div class="col-lg-4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTR-pb9gxTi7shwhk7uwNov3nwQMmcnEiVqAg&usqp=CAU" class="img-luid" alt="#">
+                    <br>
+                    <br>
+                    <h6>D&G</h6>
+                </div>
+              </div>
+          </div>
+      </section>
+     <section class="product">
+          <div class="container py-5">
+              <div class="row py-5 m-auto text-center">
+                  <div class="col-lg5">
+                      <h1>What's Trending</h1>
+                      <h6 style="color:red">THE MOST WANTED PARFUMES</h6>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-lg-3">
+                      <div class="card border-0 bg-light mb-2">
+                          <div class="card-body">
+                              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBouGF8zBYJVTxwCjk59YBvg5mPf5cldDrfA&usqp=CAU" class="img-fluid" alt="#">
+                          </div>
+                      </div>
+                      <h6>ARMANI</h6>
+                  </div>
+                  <div class="col-lg-3">
+                    <div class="card border-0 bg-light mb-2">
+                        <div class="card-body">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ36Xpm1v8kb-I1qGfTtS4K5oF5YMaMaomxIQ&usqp=CAU" class="img-fluid" alt="#">
+                        </div>
+                    </div>
+                    <h6>HUGO BOSS</h6>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card border-0 bg-light mb-2">
+                        <div class="card-body">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdExbfP265HrJ5VfJnXZArbA_jJcN3m59JJA&usqp=CAU" class="img-fluid" alt="#">
+                        </div>
+                    </div>
+                    <h6>YVES SAINT LAURENT</h6>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card border-0 bg-light mb-2">
+                        <div class="card-body">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJiAt1CU3CWiqvZQLJmQH6A3Llhc3btUeJzA&usqp=CAU" class="img-fluid" alt="#">
+                        </div>
+                    </div>
+                    <h6>CALVIN KLEIN</h6>
+                </div>
+              </div>
+          </div>
+     </section>
+     <section class="brands py-5">
+        <div class="container text-white py-5">
+           <div class="row py-5">
+            <div class="col-lg-6">
+            </div>
+          </div>
+        </div>
+      </section>
+   <br>
+   <br>
+         <div class="about-section">
+  <h1>About Us </h1>
+  <p>We are the leading perfume experts in the Albania. You can be sure that you are in the best place when making a purchase at The Perfume Shop. We have trained and developed the most knowledgeable team of sales advisors in the perfume industry, proudly boasting the largest number of industry recognised CFSS (Certified Fragrance Sales Specialist) graduates in the Albania.</p>
+
+</div>
+    <br>
+     <div class="container text-center">
+       <h3>Our Partners</h3>
+     <div class="row">
+      <div class="col-sm-2">
+        <p>CHANEL</p>
+      </div>
+      <div class="col-sm-2">
+        <p>DIOR</p>
+      </div>
+      <div class="col-sm-2">
+        <p>TOM FORD</p>
+      </div>
+      <div class="col-sm-2">
+        <p>VERSACE</p>
+      </div>
+      <div class="col-sm-2">
+        <p>DOLCE&GABBANA</p>
+      </div>
+      <div class="col-sm-2">
+        <p>ARMANI</p>
+      </div>
+     </div>
+    <br>
+    <section id="social" class="parallax">
+      <div class="overlay">
+        <div class="container">
+          <div class="row">
+           <div class="sec-title text-center white wow animated fadeInDown">
+              <h2>FOLLOW US</h2>
+           </div>
+            <ul class="social-button">
+              <li class="facebook"><a href="https://www.facebook.com/theperfumeshoponline/"><i class="fa fa-facebook fa-2x"></i></a></li>
+              <li class="twitter" data-wow-delay="0.3s"><a href="#"><i class="fa fa-whatsapp fa-2x"></i></a></li>
+              <li class="ig" data-wow-delay="0.6s"><a href="#"><i class="fa fa-instagram fa-2x"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+               <br>
+   <footer>
+        <span>(C) All rights Reserved 2022</span>
+    </footer>
+     </div>
+    </div>
+{% endblock content%}
+</body>
+</html>
